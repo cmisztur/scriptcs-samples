@@ -12,6 +12,8 @@ var address = "http://localhost:8080";
 var conf = new HttpSelfHostConfiguration(new Uri(address));
 conf.Services.Replace(typeof(IHttpControllerTypeResolver), new ControllerResolver());
 
+conf.MaxReceivedMessageSize = 214783647;
+
 conf.Routes.MapHttpRoute(name: "DefaultApi",
    routeTemplate: "api/{controller}/{id}",
    defaults: new { id = RouteParameter.Optional }

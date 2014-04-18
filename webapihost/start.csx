@@ -1,5 +1,6 @@
 #load "webapiconfig.csx"
 #load "testcontroller.csx"
+#load "toxmlcontroller.csx"
 
 using System.Reflection;
 using System.IO;
